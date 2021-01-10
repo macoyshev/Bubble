@@ -5,6 +5,7 @@
   font-family: 'Montserrat', serif;
   font-size: 20px;
   color: white;
+  cursor: none;
 }
 
 body{
@@ -160,7 +161,6 @@ main{
   border-radius: 25px;
   padding: 7px;
   background: none;
-  cursor: pointer;
   transition: 0.2s;
 }
 
@@ -192,4 +192,27 @@ main{
   font-size: 15px;
 }
 
-/* s */
+.cursor{
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index:-1;
+  pointer-events: none;;
+  transition: all 0.3s ease;
+  transition-property: background, transform ;
+  transform-origin: 100% 100%;
+  backdrop-filter: grayscale();
+}
+
+.link-grow{
+  transform: scale(2);
+  background: black;
+}
+
+.hover-link{
+  color:cyan;
+  z-index: 2;
+}
